@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임, 일상, 애니 챗방</title>
+    {% load static %} <!-- Load static files for linking CSS or JavaScript -->
+    <link rel="stylesheet" href="{% static 'chatapp/styles.css' %}"> <!-- Link to the external CSS file for styling the webpage -->
+    <style>
+        /* Add padding to the container to prevent text from sticking to the edges */
+        .rules-section .container {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>게임, 일상, 애니 챗방</h1> <!-- Main header of the website, displaying the chatroom name -->
+                <ul class="nav-links">
+                    <!-- Navigation links for quick access to different sections or external resources -->
+                    <li><a href="https://open.kakao.com/o/gcOLXdFf" target="_blank">오픈채팅</a></li> <!-- Link to Kakao open chat, opens in a new tab -->
+                    <li><a href="https://discord.gg/WmG7ZFjsEG" target="_blank">디스코드</a></li> <!-- Link to Discord channel, opens in a new tab -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome section that introduces users to the chatroom -->
+        <section id="welcome" class="welcome-section">
+            <div class="container">
+                <h2>환영합니다!</h2> <!-- Welcome message for visitors -->
+                <p>게임, 일상, 애니메이션에 대해 자유롭게 이야기할 수 있는 챗방에 오신 것을 환영합니다. 서브컬쳐에 대한 다양한 주제를 즐기며 새로운 사람들과 소통해 보세요!</p> <!-- Brief description of the purpose of the chatroom -->
+                <button onclick="window.location.href='https://open.kakao.com/o/gcOLXdFf'">지금 참여하기</button> <!-- Button to join the chatroom, redirects to Kakao open chat -->
+            </div>
+        </section>
+
+        <!-- Rules section to display the chatroom rules and guidelines -->
+        <section id="rules" class="rules-section">
+            <div class="container">
+                <h2>⭐ 공지가 갱신되면 꼭 확인해주세요 ⭐</h2> <!-- Important notice for users to check updates -->
+                <h3>ℹ 오픈채팅 정지 사유 (公式)</h3>
+                <ul>
+                    <!-- List of reasons why a user may be banned from the open chat -->
+                    <li>청소년 유해활동</li> <!-- Harmful activities involving minors -->
+                    <li>원치 않는 상대방에게 홍보하는 행위</li> <!-- Unsolicited promotion to others -->
+                    <li>같은 메시지를 연속으로 보내는 도배 행위</li> <!-- Spamming messages consecutively -->
+                    <li>욕설 및 타인에게 불편함을 줄 수 있는 비방적 메시지 발송</li> <!-- Sending abusive or discomforting messages -->
+                    <li>타인의 개인정보를 유포·도용하거나 탈취를 시도하는 행위</li> <!-- Sharing, stealing, or attempting to misuse personal information -->
+                    <li>기타 타 사용자의 서비스 이용에 불편함을 주는 행위</li> <!-- Any other behavior that disrupts service for other users -->
+                </ul>
+                <h3>ℹ 규정 일반</h3>
+                <div>
+                    <h4>&lt;前提&gt;</h4>
+                    <ol>
+                        <!-- General foundational regulations for chat participation -->
+                        <li>본 규정은 오픈채팅 운영정책을 전제사항으로 한다.</li> <!-- Regulations are based on the open chat operation policy -->
+                        <li>본 규정은 행복한 채팅 생활의 활성화를 위해 제정되었다.</li> <!-- Regulations are made to promote a happy chat environment -->
+                    </ol>
+                </div>
+                <div>
+                    <h4>&lt;상대방 기분 상하게 하지 말기&gt;</h4>
+                    <ol>
+                        <!-- Guidelines for respectful behavior towards other users -->
+                        <li>상대방으로부터 부정적인 아웃풋을 받았다면 그 즉시 관련된 언행을 멈출 것. 분쟁으로 이어질 가능성이 있는 경우, 관리자의 판단으로 중재됩니다.</li> <!-- Stop any negative interaction immediately if the other party responds negatively -->
+                        <li>예사말(반말)을 포함한, 매너없는 언행을 피할 것. 단, 상호 간에 합의된(혹은, 암묵적으로 효용된) 비매너적 언행은 그 상호 관계에 한해 면책받음.</li> <!-- Avoid rude behavior unless mutually agreed upon by both parties -->
+                        <li>상대방을 향한 비방 및 모욕적인 욕설을 할 경우, 그 즉시 관리자의 판단으로 본 채팅방 이용을 제한함.</li> <!-- Using abusive language towards others will result in restricted access by admin's judgment -->
+                        <li>누군가의 기분을 해치는, 혹은 해칠 가능성이 있는 욕설의 경우, 관리자의 판단 아래 블라인드 처리됨. 욕설을 한 당사자 또한 경고 조치.</li> <!-- Offensive language will be censored and the user will receive a warning -->
+                        <li>[권장사항] 욕설 자체를 가능한 한 하지 않으셨으면 합니다. 신고 테러의 타깃이 될 수 있으며, 카카오로부터 이용이 제한될 수 있습니다.</li> <!-- Avoid swearing to prevent being targeted by reports or restricted by Kakao -->
+                        <li>성희롱을 포함한 외설적인 언행은 그 즉시 블라인드 처리되며, 심도 높은 경고 조치 혹은 강퇴될 수 있습니다.</li> <!-- Sexual harassment or obscene behavior will be censored and may result in severe warnings or expulsion -->
+                        <li>[推し活] 누군가에게 있어 최애는 무엇보다 소중한 존재일 수 있습니다. 타 맴버의 최애를 존중하지 않거나 비방 혹은 희롱할 경우, 경고 조치 혹은 강퇴됩니다.</li> <!-- Respect others' favorite characters or idols, avoid derogatory comments -->
+                    </ol>
+                </div>
+                <div>
+                    <h4>&lt;프로필&gt;</h4>
+                    <ol>
+                        <!-- Profile guidelines -->
+                        <li>오픈프로필만 활동 가능합니다.</li> <!-- Only open profiles are allowed for participation -->
+                        <li>카카오 프로필로 입장할 경우, 그 즉시 강퇴됩니다.</li> <!-- Entering with a Kakao profile will result in immediate expulsion -->
+                        <li>실프의 경우, 3분간의 권고 조치를 내립니다. 규정을 지키지 아니할 시, 그 즉시 강퇴됩니다.</li> <!-- Self-profiles will receive a warning for 3 minutes; non-compliance will lead to expulsion -->
+                    </ol>
+                </div>
+                <div>
+                    <h4>&lt;매너 지키기&gt;</h4>
+                    <ol>
+                        <!-- Guidelines for maintaining manners in the chat -->
+                        <li>[AI 이용 가이드] 같은 명령어를 반복해서 사용하는 행위는 AI 에게 있어 오작동의 원인이 됩니다. 매너있는 AI 사용을 부탁드립니다.</li> <!-- Repeated use of the same command may cause malfunctioning of AI. Please use AI responsibly. -->
+                        <li>타인의 개인정보를 유포, 도용, 탈취할 시, 그 즉시 관련 게시는 블라인드 처리되며 언행의 당사자는 강퇴됩니다.</li> <!-- Sharing or attempting to steal personal information will result in immediate removal and expulsion -->
+                        <li>[역극 및 컨셉] 본 채팅방의 구성원 다수가 역극 및 컨셉에 관해 부정적인 입장입니다. 본 채팅방의 분위기와 맞지 않는 바, 역극 혹은 컨셉 행위는 강퇴 사유가 될 수 있습니다.</li> <!-- Roleplay and concept behavior are not welcomed and may lead to expulsion -->
+                        <li>타 방의 분쟁을 언급하는 행위는 심각한 매너 위반입니다. 관리자의 판단 아래 강퇴 혹은 경고 조치됩니다. 단, 분쟁을 언급함으로써 본 채팅방의 실익이 될 경우, 본 조항으로부터 면책됩니다.</li> <!-- Mentioning disputes from other rooms is a serious offense and may lead to expulsion or warning unless it benefits the chatroom -->
+                        <li>허위사실을 유포할 경우, 관리자의 판단 아래 강퇴 혹은 경고 조치됩니다.</li> <!-- Spreading false information may lead to expulsion or warning -->
+                        <li>본 채팅방은 어디까지나 ‘서브컬쳐’ 를 중심으로 한 대화를 장려합니다. 서브컬쳐와 관련 없는 대화를 지속하여 타 맴버의 소통을 방해할 경우, 경고 조치될 수 있습니다.</li> <!-- The chatroom focuses on subculture topics, and unrelated conversations may lead to warnings -->
+                    </ol>
+                </div>
+                <div>
+                    <h4>&lt;부방의 권한&gt;</h4>
+                    <ol>
+                        <!-- Sub-room authority regulations -->
+                        <li>권한의 원천은 방 관리 및 소통 활성화의 의무에 있으며, 권한의 실행은 규정을 근거해야 한다.</li> <!-- Authority comes from the duty to manage and promote communication and must be exercised based on rules -->
+                        <li>분쟁 발생 시 당사자를 강퇴하거나 경고 조치에 둘 수 있다.</li> <!-- During disputes, participants may be expelled or warned -->
+                        <li>분쟁의 사태가 극도로 심각할 경우, 임시적인 규정 제정이 가능하다.</li> <!-- Temporary rules may be established in case of a severe dispute -->
+                        <li>규정을 위반한 이용자를 강퇴하거나 경고 조치에 둘 수 있다.</li> <!-- Users who violate rules may be expelled or warned -->
+                        <li>분쟁 발생의 가능성에 대해 임의적인 판단이 가능하며, 이에 대한 적절한 조치 권한을 부여받는다.</li> <!-- Authority to take appropriate measures for potential disputes -->
+                        <li>게시글을 작성할 수 있으며, 확성기를 사용할 수 있다.</li> <!-- Authority to write posts and use a loudspeaker -->
+                        <li>타방과 임시적인 동맹 관계(리스트에 게시되지 않으나, 본 채팅방에서 홍보 가능)를 맺을 수 있다.</li> <!-- Authority to establish temporary alliances with other rooms for promotion -->
+                    </ol>
+                </div>
+                <h3>ℹ 게시 및 공유에 대한 규정</h3>
+                <div>
+                    <h4>&lt;이미지 및 영상&gt;</h4>
+                    <ol>
+                        <!-- Rules for posting images and videos -->
+                        <li>일러스트의 경우, R15 등급 이하의 사진만 게시 가능합니다.</li> <!-- Only R15 rated illustrations are allowed -->
+                        <li>실사의 경우, R12 등급 이하의 사진만 게시 가능합니다.</li> <!-- Only R12 rated real-life images are allowed -->
+                        <li>외설적인 사진 및 잔인한 묘사가 포함된 사진은 그 즉시 블라인드 처리됩니다. 외설적인 사진을 게시한 경우, 경고 조치됩니다. 잔인한 묘사가 포함된 사진을 게시한 경우, 그 즉시 강퇴 처리됩니다.</li> <!-- Explicit or violent images will be immediately removed and may lead to warnings or expulsion -->
+                        <li>흡연하는, 혹은 흡연을 연상케 하는 이미지 등, 폭력적인 묘사가 있는 사진은 블라인드 처리되며 당사자는 경고 조치됩니다.</li> <!-- Smoking or violent imagery will be removed, and the user will be warned -->
+                        <li>[권장사항] 1장의 사진을 보낼 경우, 크방(크기방지)짤과 함께 보내주시면 감사하겠습니다.</li> <!-- It is recommended to send an anti-resize meme with any single image -->
+                        <li>심각한 수준의 저작권 침해의 경우, 관련 게시글은 블라인드 처리되며 당사자는 경고 조치됩니다.</li> <!-- Severe copyright infringement will result in removal and a warning -->
+                        <li>당사자의 이해 여부와 관련없이, 개인정보와 관련된 언행 및 게시, 공유는 그 즉시 블라인드 처리됩니다.</li> <!-- Personal information shared will be immediately removed regardless of intent -->
+                    </ol>
+                </div>
+                <div>
+                    <h4>&lt;도배&gt;</h4>
+                    <ol>
+                        <!-- Anti-spam guidelines -->
+                        <li>맴버 개인의 채팅으로 인해 타 맴버 간의 소통이 방해될 경우, 본 채팅방은 도배로 판단합니다. 도배한 당사자는 경고 조치됩니다.</li> <!-- Repeated posts that disrupt communication will be considered spam and may lead to warnings -->
+                        <li>이모티콘을 포함하여, 3번 이상 연속으로 게시 및 공유를 하실 경우, 도배로 판단하여 블라인드 처리됩니다. 도배한 당사자는 경고 조치됩니다.</li> <!-- Posting more than three times consecutively, including emojis, will be treated as spam -->
+                        <li>검색 기능을 사용한 메시지를 3번 이상 연속으로 게시할 경우, 도배로 판단하여 즉시 블라인드 처리됩니다. 도배한 당사자는 경고 조치됩니다.</li> <!-- Posting search results consecutively will be treated as spam -->
+                        <li>[검색 메시지 가이드] 검색 메시지를 연속적으로 보내고 싶을 경우, # 문자를 이용하여 검색 결과를 채팅방 내에 내보내지 않는 형태로 공유 부탁드리겠습니다.</li> <!-- Use the # symbol to share search results without displaying them directly in the chatroom -->
+                        <li>‘전체보기’ 옵션이 생기는 장문의 메시지를 보낼 경우, 함께 대화 중인 다른 맴버의 메시지를 가릴 수 있습니다. 관리자가 장문의 필요성을 부적합으로 판단할 경우, 관련 메시지는 블라인드 처리됩니다.</li> <!-- Long messages that obscure others' chats may be removed if deemed unnecessary -->
+                    </ol>
+                </div>
+                <div>
+                    <h4>&lt;인터넷 밈 및 2차 창작&gt;</h4>
+                    <ol>
+                        <!-- Rules for sharing internet memes and derivative works -->
+                        <li>본 채팅방은 어디까지나 ‘서브컬쳐‘ 를 중심으로 한 대화를 장려합니다. 인터넷 밈을 과도하게 공유할 경우, 관련 게시글은 블라인드 처리되며 당사자는 경고 조치됩니다.</li> <!-- Excessive sharing of internet memes will be removed and may lead to warnings -->
+                        <li>본 채팅방이 인정하는 서브컬쳐와 관련된 인터넷 밈 및 2차 창작은 캐릭터에 대한 존중을 전제로 합니다. 공유된 게시글이 캐릭터와 원작에 대한 존중을 결여하고 있다고 판단될 경우, 관련 게시글은 즉시 블라인드 처리되며 당사자는 심도 높은 경고 조치 혹은 강퇴됩니다.</li> <!-- Memes and derivative works must respect the character and original work, otherwise they will be removed -->
+                    </ol>
+                </div>
+                <h3>ℹ 홍보 및 동맹에 대한 규정</h3>
+                <div>
+                    <h4>&lt;홍보&gt;</h4>
+                    <ol>
+                        <!-- Promotion guidelines -->
+                        <li>홍보는 오로지 동맹방만 가능합니다. 동맹 없이 홍보할 경우, 그 즉시 강퇴됩니다.</li> <!-- Only alliance rooms can be promoted, otherwise expulsion -->
+                        <li>본 채팅방의 일일 홍보 가능 횟수는 1회입니다.</li> <!-- Promotion is allowed once per day -->
+                        <li>[권장사항] 소통과 함께 홍보 부탁드리겠습니다.</li> <!-- It is recommended to communicate while promoting -->
+                    </ol>
+                </div>
+                <div>
+                    <h4>&lt;동맹방&gt;</h4>
+                    <p><a href="https://open.kakao.com/o/g8eissRg" target="_blank">○ 동맹방 신청 링크 ○</a></p>
+                    <ol>
+                        <!-- Alliance room guidelines -->
+                        <li>동맹 신청은 상기의 ‘동맹 신청방’ 을 통해 부탁드리겠습니다.</li> <!-- Alliance requests should be made through the designated channel -->
+                        <li>단순한 맞방 문의는 사양하고 있습니다.</li> <!-- Simple mutual visit requests are not accepted -->
+                        <li>동맹 신청 이외에도, 동맹과 관련된 모든 문의를 받고 있습니다.</li> <!-- All inquiries related to alliances are accepted -->
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 게임, 일상, 애니 챗방. 모든 권리 보유.</p> <!-- Footer with copyright information -->
+        </div>
+    </footer>
+</body>
+</html>
